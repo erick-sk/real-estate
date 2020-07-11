@@ -60,6 +60,10 @@ h4 {
   display: block !important;
 }
 
+.content-center {
+  max-width: 80rem;
+}
+
 /* BUTTONS */
 .btn {
   color: #ffffff;
@@ -154,12 +158,17 @@ h4 {
 .container-ads {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /* define at parent */
 }
 
 .ads {
+  flex-grow: 0; /* 0 negative / 1 position */
+  flex-shrink: 0; /* 0 negative / 1 position */
   flex-basis: calc(33.3% - 1rem);
+  /* flex: 0 0 calc(33.3% - 1rem); */
   border: #b5b5b5 0.1rem solid;
   background-color: #f5f5f5;
+  margin-bottom: 2rem;
 }
 
 .contentads {
@@ -181,6 +190,8 @@ h4 {
   list-style: none; /*dots on list*/
   padding: 0;
   justify-content: space-evenly;
+  flex: 1; /* fix to ads1 */
+  max-width: 50rem; /* fix to ads1 */
 }
 
 .icons-characteristics li {
@@ -197,7 +208,7 @@ h4 {
   justify-content: flex-end;
 }
 
-/* IMAGE-CONTENT */
+/* SECTION CONTACT */
 .image-contact {
   background-image: url(../img/encuentra.jpg);
   height: 40rem;
@@ -314,7 +325,7 @@ h4 {
 }
 
 /* INTERNAL PAGES */
-
+/* ABOUTUS */
 .content-aboutus {
   display: grid;
   grid-template-columns: 50% 50%; /* 1fr 1fr or repeat(2, 1fr)*/
@@ -330,4 +341,11 @@ h4 {
 
 .text-aboutus p {
   margin: 0;
+}
+
+/* ADS */
+.summary-property {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
