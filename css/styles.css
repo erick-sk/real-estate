@@ -17,6 +17,11 @@ body {
 
 /* GLOBALS */
 
+a {
+  color: #000000;
+}
+/* change color blue for black */
+
 img {
   max-width: 100%; /*images responsive*/
 }
